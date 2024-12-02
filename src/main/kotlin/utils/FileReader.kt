@@ -1,11 +1,13 @@
 package pl.szymanski.hubert.utils
 
-import java.io.File
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
 
 fun readFile(fileName: String): List<String> {
-    return getFile(fileName).readLines()
+    return Files.lines(getPath(fileName)).toList()
 }
 
-private fun getFile(fileName: String): File {
-    return File("src/main/resources/$fileName")
+private fun getPath(fileName: String): Path {
+    return Paths.get("src/main/resources/$fileName")
 }

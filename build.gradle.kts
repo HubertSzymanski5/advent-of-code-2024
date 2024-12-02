@@ -11,8 +11,9 @@ repositories {
 }
 
 dependencies {
+    implementation(kotlin("reflect"))
     testImplementation(kotlin("test"))
-    implementation("org.mockito:mockito-core:5.12.0")
+    testImplementation("org.mockito:mockito-core:5.12.0")
     testImplementation("org.apache.groovy:groovy-all:4.0.22")
     testImplementation("org.spockframework:spock-core:2.3-groovy-4.0")
     testImplementation("org.spockframework:spock-junit4:2.3-groovy-4.0")

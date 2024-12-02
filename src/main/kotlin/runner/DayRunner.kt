@@ -1,15 +1,16 @@
 package pl.szymanski.hubert.runner
 
 import pl.szymanski.hubert.day01.HistorianHysteria
+import pl.szymanski.hubert.day02.RedNosedReports
 import pl.szymanski.hubert.utils.readFile
+import kotlin.reflect.KClass
 
 class DayRunner {
     companion object {
         fun run(day: Day): DayResult {
-            val input = readFile(day.name.lowercase())
-            return when (day) {
-                Day.DAY01 -> runDay(day, HistorianHysteria(input))
-                Day.DAY02 -> TODO()
+            val runnerClass: KClass<out Runner> = when (day) {
+                Day.DAY01 -> HistorianHysteria::class
+                Day.DAY02 -> RedNosedReports::class
                 Day.DAY03 -> TODO()
                 Day.DAY04 -> TODO()
                 Day.DAY05 -> TODO()
@@ -33,6 +34,8 @@ class DayRunner {
                 Day.DAY24 -> TODO()
                 Day.DAY25 -> TODO()
             }
+            val input = readFile(day.name.lowercase())
+            return runDay(day, runnerClass.constructors.first().call(input))
         }
 
         private fun runDay(day: Day, runner: Runner): DayResult {
