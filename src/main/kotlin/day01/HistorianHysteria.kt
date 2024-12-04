@@ -24,9 +24,8 @@ class HistorianHysteria(private val input: List<String>) : Runner {
         val first = mutableListOf<Long>()
         val second = mutableListOf<Long>()
         input.forEach { line ->
-            val l = line.split("  ")
-            first.add(l[0].trim().toLong())
-            second.add(l[1].trim().toLong())
+            first.add(line.substringBefore(" ").toLong())
+            second.add(line.substringAfterLast(" ").toLong())
         }
         return first to second
     }
