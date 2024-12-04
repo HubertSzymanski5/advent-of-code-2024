@@ -1,12 +1,11 @@
 package day01
 
 import pl.szymanski.hubert.day01.HistorianHysteria
-import spock.lang.Specification
-import utils.TestFileReader
+import utils.DaySpecification
 
-class HistorianHysteriaTest extends Specification {
+class HistorianHysteriaTest extends DaySpecification {
 
-    private List<String> input = TestFileReader.readFile("day01")
+    private List<String> input = testInput("day01")
 
     def 'should pass part I example'() {
         given:

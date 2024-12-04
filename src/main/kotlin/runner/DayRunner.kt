@@ -2,6 +2,7 @@ package pl.szymanski.hubert.runner
 
 import pl.szymanski.hubert.day01.HistorianHysteria
 import pl.szymanski.hubert.day02.RedNosedReports
+import pl.szymanski.hubert.day03.MullItOver
 import pl.szymanski.hubert.utils.readFile
 import kotlin.reflect.KClass
 
@@ -11,7 +12,7 @@ class DayRunner {
             val runnerClass: KClass<out Runner> = when (day) {
                 Day.DAY01 -> HistorianHysteria::class
                 Day.DAY02 -> RedNosedReports::class
-                Day.DAY03 -> TODO()
+                Day.DAY03 -> MullItOver::class
                 Day.DAY04 -> TODO()
                 Day.DAY05 -> TODO()
                 Day.DAY06 -> TODO()

@@ -4,5 +4,5 @@ import pl.szymanski.hubert.runner.Day.*
 import pl.szymanski.hubert.runner.DayRunner.Companion.run
 
 fun main() {
-    run(DAY02).print()
+    run(DAY03).print()
 }

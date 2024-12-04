@@ -1,12 +1,11 @@
 package day02
 
 import pl.szymanski.hubert.day02.RedNosedReports
-import spock.lang.Specification
-import utils.TestFileReader
+import utils.DaySpecification
 
-class RedNosedReportsTest extends Specification {
+class RedNosedReportsTest extends DaySpecification {
 
-    private List<String> input = TestFileReader.readFile("day02")
+    private List<String> input = testInput("day02")
 
     def 'should pass part I example'() {
         given:
