@@ -4,6 +4,7 @@ import pl.szymanski.hubert.day01.HistorianHysteria
 import pl.szymanski.hubert.day02.RedNosedReports
 import pl.szymanski.hubert.day03.MullItOver
 import pl.szymanski.hubert.day04.CeresSearch
+import pl.szymanski.hubert.day05.PrintQueue
 import pl.szymanski.hubert.utils.readFile
 import kotlin.reflect.KClass
 
@@ -15,7 +16,7 @@ class DayRunner {
                 Day.DAY02 -> RedNosedReports::class
                 Day.DAY03 -> MullItOver::class
                 Day.DAY04 -> CeresSearch::class
-                Day.DAY05 -> TODO()
+                Day.DAY05 -> PrintQueue::class
                 Day.DAY06 -> TODO()
                 Day.DAY07 -> TODO()
                 Day.DAY08 -> TODO()
