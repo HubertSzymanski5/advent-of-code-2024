@@ -1,9 +1,12 @@
 package pl.szymanski.hubert.day04
 
 import pl.szymanski.hubert.runner.Runner
+import pl.szymanski.hubert.utils.Map2D
+import pl.szymanski.hubert.utils.Vector
+import pl.szymanski.hubert.utils.WordDirection
 
 class CeresSearch(private val rawInput: List<String>) : Runner {
-    private val map by lazy { Map2D.from(rawInput) }
+    private val map by lazy { Map2D.from(rawInput) { it.toCharArray().toList()} }
 
     override fun runPartI(): Long {
         var sum = 0
@@ -25,7 +28,7 @@ class CeresSearch(private val rawInput: List<String>) : Runner {
         return sum
     }
 
-    private fun Map2D.crossedMasCountAt(x: Int, y: Int): Int {
+    private fun Map2D<Char>.crossedMasCountAt(x: Int, y: Int): Int {
         if (get(x, y) != 'A') return 0
         if (checkForWords(x - 1, y - 1, Vector(1, 1), setOf("MAS", "SAM"))
             && checkForWords(x + 1, y - 1, Vector(-1, 1), setOf("MAS", "SAM"))
@@ -33,18 +36,18 @@ class CeresSearch(private val rawInput: List<String>) : Runner {
         return 0
     }
 
-    private fun Map2D.xmasCountAt(x: Int, y: Int): Int {
+    private fun Map2D<Char>.xmasCountAt(x: Int, y: Int): Int {
         if (get(x, y) != 'X') return 0
         return getPossibleWordDirectionsFrom(x, y)
             .count { checkForWords(x, y, it.vector) }
     }
 
-    private fun Map2D.checkForWords(x: Int, y: Int, v: Vector, words: Set<String> = setOf("XMAS")): Boolean {
+    private fun Map2D<Char>.checkForWords(x: Int, y: Int, v: Vector, words: Set<String> = setOf("XMAS")): Boolean {
         val word = (0 until words.first().length).fold("") { acc, i -> acc + get(x + i * v.x, y + i * v.y) }
         return word in words
     }
 
-    private fun Map2D.getPossibleWordDirectionsFrom(x: Int, y: Int): Set<WordDirection> {
+    private fun Map2D<Char>.getPossibleWordDirectionsFrom(x: Int, y: Int): Set<WordDirection> {
         val result = mutableSetOf<WordDirection>()
         if (x >= 3)
             result.add(WordDirection.W)

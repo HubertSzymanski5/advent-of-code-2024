@@ -1,4 +1,4 @@
-package pl.szymanski.hubert.day04
+package pl.szymanski.hubert.utils
 
 enum class WordDirection(val vector: Vector) {
     N(Vector(0, -1)),

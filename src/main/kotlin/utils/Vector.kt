@@ -1,3 +1,3 @@
-package pl.szymanski.hubert.day04
+package pl.szymanski.hubert.utils
 
 data class Vector(val x: Int, val y: Int)
