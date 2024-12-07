@@ -6,6 +6,7 @@ import pl.szymanski.hubert.day03.MullItOver
 import pl.szymanski.hubert.day04.CeresSearch
 import pl.szymanski.hubert.day05.PrintQueue
 import pl.szymanski.hubert.day06.GuardGallivant
+import pl.szymanski.hubert.day07.BridgeRepair
 import pl.szymanski.hubert.utils.readFile
 import kotlin.reflect.KClass
 
@@ -19,7 +20,7 @@ class DayRunner {
                 Day.DAY04 -> CeresSearch::class
                 Day.DAY05 -> PrintQueue::class
                 Day.DAY06 -> GuardGallivant::class
-                Day.DAY07 -> TODO()
+                Day.DAY07 -> BridgeRepair::class
                 Day.DAY08 -> TODO()
                 Day.DAY09 -> TODO()
                 Day.DAY10 -> TODO()
