@@ -12,6 +12,10 @@ class Map2D<T>(private val map: List<List<T>>) {
         return if (isWithingCoords(x, y)) map[y][x] else null
     }
 
+    fun getIfExists(v: Vector): T? {
+        return getIfExists(v.x, v.y)
+    }
+
     fun isWithingCoords(x: Int, y: Int): Boolean {
         return x in 0 until xSize && y in 0 until ySize
     }
