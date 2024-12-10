@@ -6,7 +6,7 @@ import kotlin.system.measureTimeMillis
 
 fun main() {
     val ms = measureTimeMillis {
-        run(DAY09).print()
+        run(DAY10).print()
     }
     println("------------------------------")
     println("Time: ${ms / 1000}s ${ms % 1000}ms")
