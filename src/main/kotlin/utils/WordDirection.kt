@@ -9,4 +9,8 @@ enum class WordDirection(val vector: Vector) {
     NE(Vector(1, -1)),
     SW(Vector(-1, 1)),
     SE(Vector(1, 1));
+
+    companion object {
+        fun mainDirections() = setOf(N, S, W, E)
+    }
 }
