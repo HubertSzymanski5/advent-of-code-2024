@@ -10,6 +10,7 @@ import pl.szymanski.hubert.day07.BridgeRepair
 import pl.szymanski.hubert.day08.ResonantCollinearity
 import pl.szymanski.hubert.day09.DiskFragmenter
 import pl.szymanski.hubert.day10.HoofIt
+import pl.szymanski.hubert.day11.PlutonianPebbles
 import pl.szymanski.hubert.utils.readFile
 import kotlin.reflect.KClass
 
@@ -27,7 +28,7 @@ class DayRunner {
                 Day.DAY08 -> ResonantCollinearity::class
                 Day.DAY09 -> DiskFragmenter::class
                 Day.DAY10 -> HoofIt::class
-                Day.DAY11 -> TODO()
+                Day.DAY11 -> PlutonianPebbles::class
                 Day.DAY12 -> TODO()
                 Day.DAY13 -> TODO()
                 Day.DAY14 -> TODO()
